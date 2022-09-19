@@ -108,6 +108,8 @@ class HomeScreen extends StatelessWidget {
               child: Row(
                 children: [
                   HotelScreen(),
+                  HotelScreen(),
+                  HotelScreen(),
                   HotelScreen()],
               ))
         ],

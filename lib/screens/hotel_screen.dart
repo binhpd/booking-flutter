@@ -1,4 +1,6 @@
 import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart';
+import 'package:gap/gap.dart';
 import 'package:hello_project/screens/app_layout.dart';
 import 'package:hello_project/utils/app_style.dart';
 
@@ -12,8 +14,17 @@ class HotelScreen extends StatelessWidget {
       width: size.width * 0.6,
       height: 350,
       padding: const EdgeInsets.symmetric(horizontal: 15, vertical: 15),
+      margin: const EdgeInsets.only(right: 10),
       decoration: BoxDecoration(
-          color: Styles.primaryColor, borderRadius: BorderRadius.circular(24)),
+          color: Styles.primaryColor,
+          borderRadius: BorderRadius.circular(24),
+          boxShadow: [
+            BoxShadow(
+              color: Colors.grey.shade200,
+              blurRadius: 20,
+              spreadRadius: 5
+            )
+          ]),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
@@ -25,6 +36,12 @@ class HotelScreen extends StatelessWidget {
                 image: const DecorationImage(
                     fit: BoxFit.cover,
                     image: AssetImage("assets/images/room/room2.jpg"))),
+          ),
+          Gap(10),
+          Container(
+            child: Column[
+              
+            ],
           )
         ],
       ),
