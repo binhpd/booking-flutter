@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:hello_project/screens/home_screen.dart';
 import 'package:hello_project/screens/search_screen.dart';
+import 'package:hello_project/screens/ticket_screen.dart';
 
 
 class BottomBar extends StatefulWidget {
@@ -14,11 +15,11 @@ class BottomBar extends StatefulWidget {
 
 class _BottomBarState extends State<BottomBar> {
 
-  int _selectedIndex = 1;
+  int _selectedIndex = 2;
   static final List<Widget> _widgetOptions = <Widget>[
     const HomeScreen(),
     const SearchScreen(),
-    const Text("Tickets"),
+    const TicketScreen(),
     const Text("Profile")
   ];
 

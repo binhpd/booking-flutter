@@ -4,6 +4,7 @@ import 'package:get/route_manager.dart';
 import 'package:hello_project/screens/app_layout.dart';
 import 'package:hello_project/utils/app_style.dart';
 import 'package:hello_project/widgets/DoubleTextWidget.dart';
+import 'package:hello_project/widgets/TicketTab.dart';
 import 'package:hello_project/widgets/app_icon_text.dart';
 
 class SearchScreen extends StatelessWidget {
@@ -24,39 +25,7 @@ class SearchScreen extends StatelessWidget {
             "What are you \nlooking for?",
             style: Styles.headLineStyle1.copyWith(fontSize: 35),
           ),
-          FittedBox(
-            child: Container(
-                padding: const EdgeInsets.all(3.5),
-                decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(50),
-                    color: Color(0xFFF4F6FD)),
-                child: Row(
-                  children: [
-                    Container(
-                        width: size.width * 0.44,
-                        padding: EdgeInsets.symmetric(
-                            vertical: AppLayout.getWidth(8)),
-                        decoration: BoxDecoration(
-                            borderRadius: BorderRadius.horizontal(
-                                left: Radius.circular(50)),
-                            color: Colors.white),
-                        child: Center(
-                          child: Text("Airline tickets"),
-                        )),
-                    Container(
-                        width: size.width * 0.44,
-                        padding: EdgeInsets.symmetric(
-                            vertical: AppLayout.getWidth(8)),
-                        decoration: BoxDecoration(
-                            borderRadius: BorderRadius.horizontal(
-                                right: Radius.circular(50)),
-                            color: Colors.transparent),
-                        child: Center(
-                          child: Text("Hotels"),
-                        ))
-                  ],
-                )),
-          ),
+          TicketTab(firstTab: "Tickets", secondTab: "Hotels"),
           Gap(AppLayout.getHeight(20)),
           const AppIconText(
               icon: Icons.flight_takeoff_rounded, text: "Departure"),
