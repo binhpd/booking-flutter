@@ -16,6 +16,7 @@ class AppLayoutBuilderWidget extends StatelessWidget {
     return LayoutBuilder(
         builder: (BuildContext context,
             BoxConstraints constraints) {
+          print("The width is ${constraints.widthConstraints()}");
           return Flex(
             direction: Axis.horizontal,
             mainAxisAlignment:
